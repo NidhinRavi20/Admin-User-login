@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+    --primary-color : #093960;
+    --secondary-color : #bbf6e6;
+    --body-text-color : #4A6FB9;
+    --navbar-footer-color : #E5E1E1;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    color : var(--body-text-color);
+    background-color: #abacaa;
+}
+
+.site-logo{
+    padding : 5px 20px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-link{
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.shadow-effect{
+    border: none;
+    box-shadow: 0px 0px 33px -10px rgb(229, 229, 229);
+}
+
+.bg-theme{
+    background-color: #9ba6aa;
+}
+
+.bg-theme-primary{
+    background-color: var(--primary-color);
+}
+ 
+.bg-theme-secondary{
+    background-color: var(--secondary-color);
+}
+
+.text-theme-primary{
+    color: var(--primary-color);
+}
+
+.btn-sub{
+    height: 58px;
+    width: 200px;
+    border: none;
+    font-size: 20px;
+    background-color: #3f6e46;
+    color: white;
+    /* margin-top: 20px; */
+}
+
+input[type = text], input[type = email], input[type = password]{    
+    
+    margin-top: 5px;
+    height: 60px;
+    padding-left: 20px;
+    /* font-size: 13px; */
+    width: 100%;
+}
+
+.select{
+    margin-top: 5px;
+    height: 60px;
+    padding-left: 20px;
+    /* font-size: 13px; */
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+}
+
+.btn-theme{
+    height: 58px;
+    border: none;
+    background-color: var(--primary-color);
+}

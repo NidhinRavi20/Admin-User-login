@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+
+            <h1 class="text-black text-center mt-5">User Login</h1>
+
+            <div class="card shadow-effect bg-theme mt-5">
+                <div class="card-body p-5">
+                    <form [formGroup] = "form" (ngSubmit)="onSubmit()">
+
+                        <div class="form-group mt-3">
+                            <label for=""><h4>Name</h4></label>
+                            <input 
+                            type="text" 
+                            class="form-control"
+                            placeholder="Name"
+                            name="name"
+                            formControlName = 'name'
+                            [ngClass]="{'is-invalid' : name.touched && name.invalid}"
+                            required
+                            >
+
+                            <div *ngIf= "name.errors && name.errors['required']">
+                                <div class="alert alert-danger" *ngIf = "name.touched && name.invalid" >Name field is required</div>
+                              </div>
+                              <div *ngIf= "name.errors && name.errors['pattern']">
+                                <div class="alert alert-danger" *ngIf = "name.touched && name.invalid" >Enter a valid Name</div>
+                              </div>
+
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for=""><h4>Email</h4></label>
+                            <input 
+                            type="email" 
+                            class="form-control"
+                            placeholder="Email"
+                            name="email"
+                            formControlName = 'email'
+                            [ngClass]="{'is-invalid' : email.touched && email.invalid}"
+                            required
+                            >
+
+                            <div *ngIf= "email.errors && email.errors['required']">
+                                <div class="alert alert-danger" *ngIf = "email.touched && email.invalid" >Email field is required</div>
+                              </div>
+                              <div *ngIf= "email.errors && email.errors['pattern']">
+                                <div class="alert alert-danger" *ngIf = "email.touched && email.invalid" >Enter correct email address</div>
+                              </div>
+
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for=""><h4>Phone no.</h4></label>
+                            <input 
+                            type="text" 
+                            class="form-control"
+                            placeholder="Phone no."
+                            name="phone"
+                            formControlName = 'phone'
+                            [ngClass]="{'is-invalid' : phone.touched && phone.invalid}"
+                            required
+                            >
+
+                            <div *ngIf= "phone.errors && phone.errors['required']">
+                                <div class="alert alert-danger" *ngIf = "phone.touched && phone.invalid" >Email field is required</div>
+                              </div>
+                              <div *ngIf= "phone.errors && phone.errors['pattern']">
+                                <div class="alert alert-danger" *ngIf = "phone.touched && phone.invalid" >Enter correct phone number pattern</div>
+                              </div>
+
+                        </div>
+
+                        <button class="btn btn-dark btn-sub mt-5" [disabled] = "form.invalid">Submit</button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

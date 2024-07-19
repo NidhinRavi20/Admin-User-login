@@ -1,0 +1,39 @@
+<div *ngIf="userData">
+    <div class="row mt-5 mb-5">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <h1 class="text-black text-center mt-5">User Details</h1>
+  
+        <div class="card shadow-effect ">
+          <div class="card-body ">
+            <table class="table row-border hover ">
+                  <thead>
+                      <tr>
+                          <th class="bg-theme-secondary"><h4>Name</h4></th>
+                          <th><h4>Email Address</h4></th>
+                          <th><h4>Phone number</h4></th>
+                          
+                      </tr>
+                  </thead>
+  
+                  <tbody>
+                      <tr>
+                          <td><h5>{{userData.name}}</h5></td>
+                          <td><h5>{{userData.email}}</h5></td>
+                          <td><h5>{{userData.phone}}</h5></td>
+                          
+                      </tr>
+                  </tbody>
+                 
+                  <div class="text-center">
+                      <button class="btn btn-sub btn-dark btn-change btn-block mt-5" routerLink="/">Back</button>
+                  </div>
+  
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+  
